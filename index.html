@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mangrove Haven</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Fixed Navigation Bar */
+        .header-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 1);
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+
+        .title {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 10px;
+        }
+
+        nav a {
+            display: inline-block;
+            background: white;
+            color: black;
+            padding: 12px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: #6b6d6b;
+            color: white;
+        }
+
+        /* Full-screen header */
+        header {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        /* Dark overlay for readability */
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.0);
+            z-index: 1;
+        }
+
+        /* Overlay content */
+        header .overlay {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+            max-width: 800px;
+        }
+        /* Rectangle block styling */
+        .info-box {
+            background: rgba(7, 7, 7, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .learn-more {
+            display: inline-block;
+            background: black;
+            color: white;
+            padding: 12px 20px;
+            margin-top: 15px;
+            margin-right: 60px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .learn-more:hover {
+            background: gray;
+        }
+
+        /* Section styling */
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 24px;
+            background-color: #f4f4f4;
+        }
+
+        /* Smooth scrolling */
+        body {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            const target = document.querySelector(targetId);
+            if (target) {
+                target.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        });
+    });
+</script>
+<body>
+    <!-- Title & Navigation -->
+<div class="header-container">
+    <div class="title">Mangrove Haven: Protecting Nature, Sustaining Life</div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#hero"><i class="fas fa-home"></i> HOME</a></li>
+            <li><a href="#about"><i class="fas fa-file-alt"></i> ABOUT US</a></li>
+            <li><a href="#team"><i class="fas fa-user"></i> OUR TEAM</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> CONTACT US</a></li>
+        </ul>
+    </nav>
+</div>
+
+    
+    <!-- Header Section -->  
+<section id="hero">
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Protecting Mangroves, Preserving Life.</h1>
+            <p>Mangroves protect our coasts, store carbon, and support marine life. Join us in conserving these vital ecosystems!</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </div> 
+</section>
+    <!-- About Section -->
+<section id="about">
+    <div class="info-box">
+        <div class="about-container">
+            <img src="https://i.ibb.co/wFnWBbjY/480902277-1156780959335233-6509455620633718083-n.jpg" alt="Ms. Rhena Mae Montes">
+            <p>Ms. Rhena Mae Montes<br>Empowerment Technology Instructor</p>
+        </div>        
+        <h1>About Us</h1>
+        <p>We are passionate about protecting and restoring mangrove forests. Our mission is to educate people on their importance and encourage conservation efforts. Join us in making a difference!</p>
+
+        <h2>Why Are Mangroves Important?</h2>
+        <ul>
+            <li><strong>Coastal Protection –</strong> Mangroves act as natural barriers, reducing wave energy by up to 66%, preventing coastal erosion, and protecting communities from typhoons and storm surges.</li>
+            <li><strong>Habitat for Marine Life –</strong> Their complex root systems serve as nurseries for fish, crabs, shrimps, and other marine species, sustaining fisheries and supporting local livelihoods.</li>
+            <li><strong>Carbon Storage –</strong> Mangroves absorb and store more carbon per hectare than rainforests, helping fight climate change by reducing greenhouse gases.</li>
+            <li><strong>Water Filtration –</strong> Mangroves help maintain water quality by trapping sediments and pollutants, keeping coastal waters clean.</li>
+            <li><strong>Livelihood and Ecotourism –</strong> Sustainable mangrove forests create opportunities for fishing, honey production, and eco-tourism, benefiting local economies.</li>
+        </ul>
+
+        <h2>Why Do We Need to Plant Mangroves?</h2>
+        <ul>
+            <li><strong>Rebuilding Lost Habitats –</strong> Reforestation efforts help restore lost mangrove forests, ensuring that marine life continues to thrive.</li>
+            <li><strong>Strengthening Coastal Resilience –</strong> More mangroves mean better protection against rising sea levels, strong waves, and extreme weather events.</li>
+            <li><strong>Fighting Climate Change –</strong> Expanding mangrove forests increases carbon storage, helping to reduce global warming.</li>
+            <li><strong>Enhancing Biodiversity –</strong> Planting mangroves supports ecosystems by providing food and shelter for birds, fish, and other wildlife.</li>
+        </ul>
+        <div class="tawsan-container">
+            <!-- Left Side: Image -->
+            <div class="image-box">
+                <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t39.30808-6/465672876_3830612227197458_6035856935359329093_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=f0oySgk2fuoQ7kNvgFMs-Bm&_nc_oc=AdggBci8w4kaUHolr2FIExt6osbJZxDvn7iho58NvHtFviGsU0soHYxfl49LKr9A3h8&_nc_zt=23&_nc_ht=scontent.fceb6-1.fna&_nc_gid=AmZ7pXhDwG1iW8ujRN4WPNR&oh=00_AYCKgdBcxeJwrN0J6nvuj2qSCFoM4r38Ctg1cSInNjrzGQ&oe=67BC5C72" alt="Tawsan Mangrove Forest">
+            </div>
+    
+            <!-- Right Side: Text Content -->
+            <div class="text-box">
+                <h2>Tawsan Mangroves</h2>
+                <p>
+                    Danao City, located in northern Cebu, Philippines, is home to the Tawsan Mangrove Forest Ecopark, which encompasses at least 21 mangrove species, including both naturally grown and hybrid varieties. This ecopark, situated in Barangay Guinsay, was inaugurated on August 28, 2023, and serves as a habitat for various marine life, such as shrimps and fishes.
+                </p>
+                <p>
+                    The name "Tawsan" is derived from the phrase "Tawo sa Hunasan," paying homage to the communities residing along the city’s coastal areas for decades. The ecopark is open daily from 6 a.m. to 5 p.m., with an entrance fee of ₱25 and an additional ecological fee of ₱15, though Danao City residents are exempt from the ecological fee.
+                </p>
+                <p>
+                    Future developments for the ecopark include the construction of an almost three-kilometer-long footbridge for visitors who prefer not to kayak, as well as a floating restaurant to offer a unique dining experience amidst the mangroves.
+                </p>
+                <p>
+                    While specific data on the total area covered by mangroves in Danao City is not readily available, the establishment of the Tawsan Mangrove Forest Ecopark highlights the city’s commitment to preserving and showcasing its mangrove ecosystems.
+                </p>
+            </div>
+        </div>
+</section>
+
+
+    <!-- Team Section -->
+    <section id="team">
+        <div class="team-container">
+            <h1>Meet the Team</h1>
+            <img src="https://i.ibb.co/L7tWh50/team.png" alt="Our Team" class="team-image">
+        </div>
+    </section>
+    
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-section">
+            <h2>Contact Us</h2>
+            <p>We’re here to answer your questions, collaborate, or help you get involved in mangrove. Drop us a message, and let’s make a difference together!</p>
+            <style>
+                /* Center the form container */
+                .form-wrapper {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  min-height: 30vh;
+                  flex-direction: column;
+                }
+              
+                /* Success message styling */
+                .success-message {
+                  display: none; /* Hidden by default */
+                  color: white;
+                  background: rgb(6, 7, 6);
+                  padding: 10px;
+                  margin-bottom: 10px;
+                  border-radius: 8px;
+                  width: 400px;
+                  text-align: center;
+                }
+              
+                /* Form container styling */
+                .contact-form {
+                  background: rgba(0, 0, 0, 0.6); /* Transparent black background */
+                  padding: 20px;
+                  border-radius: 12px;
+                  width: 400px;
+                  text-align: center;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                }
+              
+                /* Label styling */
+                .contact-form label {
+                  width: 90%;
+                  color: white;
+                  font-weight: bold;
+                  margin-bottom: 5px;
+                  text-align: left;
+                }
+              
+                /* Input and textarea styling - Rounded blocks */
+                .contact-form input,
+                .contact-form textarea {
+                  width: 90%;
+                  padding: 12px;
+                  margin-bottom: 15px;
+                  border: none;
+                  border-radius: 25px; /* Fully rounded corners */
+                  font-size: 16px;
+                  background: white;
+                  color: black;
+                  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+                }
+              
+                /* Remove resize and enable scrolling */
+                .contact-form textarea {
+                  resize: none;
+                  overflow-y: auto;
+                  height: 100px;
+                }
+              
+                /* Button styling */
+                .contact-form .submitform {
+                  background: #070707;
+                  color: white;
+                  padding: 12px 20px;
+                  border: none;
+                  border-radius: 25px; /* Fully rounded button */
+                  font-size: 16px;
+                  cursor: pointer;
+                  transition: 0.3s;
+                  width: 90%;
+                }
+              
+                .contact-form .submitform:hover {
+                  background: gray;
+                }
+              </style>
+              
+              <div class="form-wrapper">
+                <!-- Success message -->
+                <div class="success-message" id="successMessage">
+                   Message sent successfully!
+                </div>
+              
+                <!-- Contact Form -->
+                <form class="contact-form" id="contactForm">
+                  <label>Your email:</label>
+                  <input type="email" name="email" required>
+              
+                  <label>Your message:</label>
+                  <textarea name="message" rows="4" required></textarea>
+              
+                  <button class="submitform" type="submit">Send Message!</button>
+                </form>
+              </div>
+              
+              <script>
+                document.getElementById("contactForm").addEventListener("submit", async function(event) {
+                  event.preventDefault(); // Prevents page reload
+              
+                  const form = event.target;
+                  const formData = new FormData(form);
+              
+                  // Send form data to Formspree
+                  const response = await fetch("https://formspree.io/f/mjkgjnep", {
+                    method: "POST",
+                    body: formData,
+                    headers: { "Accept": "application/json" }
+                  });
+              
+                  if (response.ok) {
+                    document.getElementById("successMessage").style.display = "block"; // Show success message
+                    form.reset(); // Clear the form fields
+                  } else {
+                    alert("Oops! Something went wrong.");
+                  }
+                });
+              </script>
+            <div class="contact-info">
+                <p>📧 mangrovehaven@org.com</p>
+                <p>📍 Mangrove Haven</p>
+                <p>📞 09123456789</p>
+              </div>              
+        </div>        
+    </section>
+    
